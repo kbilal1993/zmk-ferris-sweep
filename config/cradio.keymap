@@ -8,10 +8,10 @@
 #define DEFAULT 0
 #define LOWER 1
 #define RAISE 2
-#define ADJUST 4
-#define NAV 5
-#define MACRO 6
-#define STEP 7
+#define ADJUST 3
+#define NAV 4
+#define MACRO 5
+#define STEP 6
 
 &mt {
     flavor = "tap-preferred";
@@ -19,24 +19,24 @@
 
 / {
     
-    //combos {
-    //    compatible = "zmk,combos";
-    //    combo_esc {
-    //      timeout-ms = <50>;
-    //        key-positions = <13 14>;
-    //        bindings = <&kp ESC>;
-    //    };
-    //    combo_enter {
-    //        timeout-ms = <50>;
-    //        key-positions = <15 16>;
-    //        bindings = <&kp ENTER>;
-    //    };
-    //    combo_quote {
-    //        timeout-ms = <50>;
-    //        key-positions = <17 18>;
-    //        bindings = <&kp ENTER>;
-    //    };
-    //};
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <13 14>;
+            bindings = <&kp ESC>;
+        };
+        combo_enter {
+            timeout-ms = <50>;
+            key-positions = <15 16>;
+            bindings = <&kp ENTER>;
+        };
+        combo_quote {
+            timeout-ms = <50>;
+            key-positions = <17 18>;
+            bindings = <&kp ENTER>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -50,18 +50,18 @@
         };
         lower_layer {
             bindings = <
-            &kp EXCL   &kp AT     &kp HASH   &kp DOLLAR &kp PERCENT    &kp CARET  &kp AMPS     &kp ASTRK     &kp LPAR   &kp RPAR
-            &none      &none      &kp LBKT   &kp RBKT   &kp LPAR       &kp RPAR   &kp UNDER    &kp PLUS      &kp SQT    &kp TAB
-            &none      &none      &none      &none      &kp LBRC       &kp RBRC   &kp LS(NUHS) &kp LS(NUBS)  &kp GRAVE  &kp LS(TAB)
-                                             &trans     &mo MACRO      &none      &mo ADJUST
+            &kp EXCL   &kp AT     &kp HASH   &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPS      &kp ASTRK     &kp LPAR   &kp RPAR
+            &none      &none      &kp LBKT   &kp RBKT    &kp LPAR       &kp RPAR   &kp UNDER     &kp PLUS      &kp SQT    &kp TAB
+            &none      &none      &none      &none       &kp LBRC       &kp RBRC   &kp LS(NUHS)  &kp LS(NUBS)  &kp GRAVE  &kp LS(TAB)
+                                             &trans      &mo MACRO      &none      &mo ADJUST
              >;
         };
         raise_layer {
             bindings = <
-            &kp N1     &kp N2     &kp N3     &kp N4     &kp N5         &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
-            &none      &none      &kp LBKT   &kp RBKT   &kp LPAR       &kp RPAR   &kp MINUS  &kp EQUAL  &kp SQT    &kp TAB
-            &none      &none      &none      &none      &kp LBRC       &kp RBRC   &kp NUHS   &kp NUBS   &kp GRAVE  &kp LS(TAB)
-                                             &mo ADJUST &none          &none      &trans
+            &kp N1     &kp N2     &kp N3     &kp N4      &kp N5         &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
+            &none      &none      &kp LBKT   &kp RBKT    &kp LPAR       &kp RPAR   &kp MINUS  &kp EQUAL  &kp SQT    &kp TAB
+            &none      &none      &none      &none       &kp LBRC       &kp RBRC   &kp NUHS   &kp NUBS   &kp GRAVE  &kp LS(TAB)
+                                             &mo ADJUST  &none          &none      &trans
              >;
         };
         adjust_layer {
@@ -74,10 +74,10 @@
         };
         nav_layer {
             bindings = <
-            &none      &none      &none      &none      &none          &none      &kp LC(LEFT) &none      &none      &kp LC(RIGHT)
-            &none      &none      &none      &none      &none          &none      &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT
-            &none      &none      &none      &none      &none          &none      &none        &none      &none      &none
-                                             &mo MACRO  &trans         &kp DELETE &lt 1 BSPC
+            &none      &none      &none      &none       &none          &none       &kp LC(LEFT) &none      &none      &kp LC(RIGHT)
+            &none      &none      &none      &none       &none          &none       &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT
+            &none      &none      &none      &none       &none          &none       &none        &none      &none      &none
+                                             &mo MACRO   &trans         &kp DELETE  &lt 1 BSPC
              >;
         };
         macro_layer {
@@ -90,10 +90,10 @@
         };
         stepmania_layer {
             bindings = <
-            &kp ESC     &none      &none      &none      &none          &none      &none        &none      &none      &kp ENTER
-            &none       &none      &kp LEFT   &kp DOWN   &none          &none      &kp UP       &kp RIGHT  &none      &none
-            &to DEFAULT &none      &none      &none      &none          &none      &none        &none      &none      &to DEFAULT
-                                              &none      &kp SPACE      &kp SPACE  &none
+            &kp ESC      &none      &none      &none      &none          &none      &none        &none      &none      &kp ENTER
+            &none        &none      &kp LEFT   &kp DOWN   &none          &none      &kp UP       &kp RIGHT  &none      &none
+            &to DEFAULT  &none      &none      &none      &none          &none      &none        &none      &none      &to DEFAULT
+                                               &none      &kp SPACE      &kp SPACE  &none
              >;
         };
     };
