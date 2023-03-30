@@ -74,8 +74,8 @@
         };
         nav_layer {
             bindings = <
-            &none      &none      &none      &none      &none          &none      &kc LC(LEFT) &none      &none      &kc LC(RIGHT)
-            &none      &none      &none      &none      &none          &none      &kc LEFT     &kc DOWN   &kc UP     &kc RIGHT
+            &none      &none      &none      &none      &none          &none      &kp LC(LEFT) &none      &none      &kp LC(RIGHT)
+            &none      &none      &none      &none      &none          &none      &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT
             &none      &none      &none      &none      &none          &none      &none        &none      &none      &none
                                              &mo MACRO  &trans         &kp DELETE &lt 1 BSPC
              >;
@@ -90,10 +90,10 @@
         };
         stepmania_layer {
             bindings = <
-            &kc ESC     &none      &none      &none      &none          &none      &none        &none      &none      &kc ENTER
-            &none       &none      &kc LEFT   &kc DOWN   &none          &none      &kc UP       &kc RIGHT  &none      &none
+            &kp ESC     &none      &none      &none      &none          &none      &none        &none      &none      &kp ENTER
+            &none       &none      &kp LEFT   &kp DOWN   &none          &none      &kp UP       &kp RIGHT  &none      &none
             &to DEFAULT &none      &none      &none      &none          &none      &none        &none      &none      &to DEFAULT
-                                              &none      &kc SPACE      &kc SPACE  &none
+                                              &none      &kp SPACE      &kp SPACE  &none
              >;
         };
     };
