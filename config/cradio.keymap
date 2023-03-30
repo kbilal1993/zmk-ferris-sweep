@@ -24,17 +24,17 @@
         combo_esc {
             timeout-ms = <50>;
             key-positions = <13 14>;
-            bindings = <&kp ESC>
+            bindings = <&kp ESC>;
         };
         combo_enter {
             timeout-ms = <50>;
             key-positions = <15 16>;
-            bindings = <&kp ENTER>
+            bindings = <&kp ENTER>;
         };
         combo_quote {
             timeout-ms = <50>;
             key-positions = <17 18>;
-            bindings = <&kp ENTER>
+            bindings = <&kp ENTER>;
         };
     };
 
