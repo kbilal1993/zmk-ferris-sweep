@@ -40,6 +40,11 @@
 	;
 };
 
+// Right side is being weird
+r1 (pos 17) = 10
+l (pos 4) = 21
+(pos 8) = 16
+
 
 / {
     
