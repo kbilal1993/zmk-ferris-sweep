@@ -4,6 +4,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+
+// This stuff is to fix the wiring
 #undef RC
 #include <dt-bindings/zmk/matrix_transform.h>
 
@@ -19,6 +21,8 @@
     flavor = "tap-preferred";
 };
 
+// The right side of my Sweep is all jumbled up. This fixes it
+// I had to use a multimeter to test each switch and pin. Hope this helps someone
 &default_transform {
 		compatible = "zmk,matrix-transform";
 		columns = <34>;
@@ -31,7 +35,7 @@
 		>;
 	};
 
-// Fun fact, there are slightly different variants of the Sweep. This code is needed to make it behave:
+// My Sweep swaps q and b for some reason.
 &kscan0 {
 	input-gpios
 	= <&pro_micro  6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // was b, now q. was k, now ;
@@ -71,7 +75,7 @@
         combo_quote {
             timeout-ms = <50>;
             key-positions = <17 18>;
-            bindings = <&kp ENTER>;
+            bindings = <&kp DQT>;
         };
     };
 
