@@ -18,7 +18,7 @@
 #define STEP 6
 
 &mt {
-    flavor = "tap-preferred";
+    flavor = "hold-preferred";
 };
 
 // The right side of my Sweep is all jumbled up. This fixes it
